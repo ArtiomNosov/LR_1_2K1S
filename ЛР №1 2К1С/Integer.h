@@ -14,9 +14,14 @@ public:
 		WholeNamber = n;
 	};
 	// Перегрузка операторов
+		// Арифметика
 	friend const Integer operator+(const Integer& left, const Integer& right);
 
 	friend Integer& operator+=(Integer& left, const Integer& right);
+
+	friend Integer operator*(Integer& left, const Integer& right);
+
+		// Логика
 
 	friend bool operator==(const Integer& left, const Integer& right);
 
@@ -32,6 +37,10 @@ const Integer operator+(const Integer& left, const Integer& right) {
 Integer& operator+=(Integer& left, const Integer& right) {
 	left.WholeNamber += right.WholeNamber;
 	return left;
+}
+
+Integer operator*(Integer& left, const Integer& right) {
+	return Integer((left.WholeNamber * right.WholeNamber));
 }
 
 bool operator==(const Integer& left, const Integer& right) {

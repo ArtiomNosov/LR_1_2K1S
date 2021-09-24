@@ -164,6 +164,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ArraySequence.h" />
+    <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="Integer.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListSequence.h" />
