@@ -121,7 +121,8 @@ public:
 template<class T>
 bool operator==(const ArraySequence<T>& left, const ArraySequence<T>& right) {
 	bool result = true, flag = false;
-	T* item_1 = nullptr, * item_2 = nullptr;
+	T* item_1 = nullptr;
+	T* item_2 = nullptr;
 	int Len_1 = left.GetLength();
 	int Len_2 = right.GetLength();
 	if (Len_1 != Len_2) {
