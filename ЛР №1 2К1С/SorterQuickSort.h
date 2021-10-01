@@ -1,17 +1,17 @@
 #pragma once
 #include "Sorter.h"
-template <class T>
-class SorterQuickSort:public Sorter<T> {
+template <class SeqType, class T>
+class SorterQuickSort:public Sorter<SeqType> {
 private:
-    virtual void Swap(void* Sequence, int i, int j) = 0;
+    virtual void Swap(SeqType* Sequence, int i, int j) = 0;
     /* This function takes last element as pivot, places
        the pivot element at its correct position in sorted
         array, and places all smaller (smaller than pivot)
        to left of pivot and all greater elements to right
        of pivot */
-    virtual T* GetElem(void* Sequence, int i) = 0;
+    virtual T* GetElem(SeqType* Sequence, int i) = 0; // Я не понимаю зачем это мнетод, если он должен быть у Sequence
 
-    int Partition(void* Sequence, int low, int high)
+    int Partition(SeqType* Sequence, int low, int high)
     {
         T* pivot = GetElem(Sequence, high);    // pivot
         int i = (low - 1);  // Index of smaller element
@@ -35,7 +35,7 @@ private:
       low  --> Starting index,
       high  --> Ending index */
 protected:
-    void QuickSort(void* Sequence, int low, int high)
+    void QuickSort(SeqType* Sequence, int low, int high)
     {
         if (low < high)
         {
@@ -50,7 +50,4 @@ protected:
         }
     }
 public:
-	virtual void Sort(void* Sequence, int startIndex, int EndIndex) override {
-        QuickSort(Sequence, startIndex, EndIndex);
-	}
 };

@@ -7,6 +7,11 @@ class LinkedListSequence : public Sequence<T>
 {
 private:
 	LinkedList<T>* internalList;
+protected:
+	LinkedListSequence(LinkedList<T>* newIternalList):
+		internalList(newIternalList)
+	{
+	};
 public:
 		// Конструкторы
 	// Копирующий конструктор
@@ -39,12 +44,7 @@ public:
 	}
 	LinkedListSequence<T>* GetSubsequence(int startIndex, int endIndex) {
 		LinkedList<T>* bufList = internalList->GetSubList(startIndex, endIndex);
-		LinkedListSequence<T>* bufListSeq = new LinkedListSequence<T>();
-		for (int i = 0; i < bufList->GetLength(); i++) {
-			bufListSeq->Append(bufList->Get(i));
-		}
-		delete bufList;
-		return (LinkedListSequence<T>*)bufListSeq;
+		return new LinkedListSequence<T>(bufList);
 	}
 	int GetLength() {
 		return internalList->GetLength();
@@ -78,5 +78,9 @@ public:
 	// Перегрузка операторов
 	bool Equals(LinkedListSequence<T>* L2) {
 		return (internalList->Equals(internalList, L2->internalList));
+	}
+	// Перегруженные операторы
+	T* operator[](int index) {
+		return Get(index);
 	}
 };

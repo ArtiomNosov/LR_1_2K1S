@@ -22,13 +22,13 @@ public:
 			Items->Set(i, arr[i]);
 		}
 	} // Копировать элементы из переданного массива
-	ArraySequence(ArraySequence <T>& list)
+	ArraySequence(ArraySequence <T>* list)
 	{
 		Items = new DynamicArray<T>();
-		Items->Resize(list.GetLength());
-		for (int i = 0; i < (list.GetLength()); i++)
+		Items->Resize(list->GetLength());
+		for (int i = 0; i < (list->GetLength()); i++)
 		{
-			Items->Set(i, list.Get(i));
+			Items->Set(i, list->Get(i));
 		}
 	}// Создать на основе другого - Копирующий конструктор
 
@@ -110,4 +110,28 @@ public:
 	void ResizeRight(int newSize) {
 		Items->ResizeRight(newSize);
 	}
+	// Перегруженные операторы
+	T* operator[](int index) {
+		return Get(index);
+	}
+
+	friend bool operator==(const ArraySequence<T>& left, const ArraySequence<T>& right);
+};
+
+template<class T>
+bool operator==(const ArraySequence<T>& left, const ArraySequence<T>& right) {
+	bool result = true, flag = false;
+	T* item_1 = nullptr, * item_2 = nullptr;
+	int Len_1 = left.GetLength();
+	int Len_2 = right.GetLength();
+	if (Len_1 != Len_2) {
+		return false;
+	}
+	for (int i = 0; i < left.GetLength(); i++) {
+		item_1 = left.Get(i);
+		item_2 = right.Get(i);
+		flag = ((*(item_1)) == (*(item_2)));
+		result &= flag;
+	}
+	return result;
 };

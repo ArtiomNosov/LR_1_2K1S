@@ -19,13 +19,15 @@ public:
 
 	friend Integer& operator+=(Integer& left, const Integer& right);
 
-	friend Integer operator*(Integer& left, const Integer& right);
+	friend Integer* operator*(Integer& left, const Integer& right);
 
 		// Логика
 
 	friend bool operator==(const Integer& left, const Integer& right);
 
 	friend bool operator<(Integer& left, Integer& right);
+
+	friend bool operator>(Integer& left, Integer& right);
 
 	friend bool operator<=(Integer& left, Integer& right);
 };
@@ -39,8 +41,9 @@ Integer& operator+=(Integer& left, const Integer& right) {
 	return left;
 }
 
-Integer operator*(Integer& left, const Integer& right) {
-	return Integer((left.WholeNamber * right.WholeNamber));
+Integer* operator*(Integer& left, const Integer& right) {
+	auto newInt = new Integer((left.WholeNamber * right.WholeNamber));
+	return newInt;
 }
 
 bool operator==(const Integer& left, const Integer& right) {
@@ -49,6 +52,10 @@ bool operator==(const Integer& left, const Integer& right) {
 
 bool operator<(Integer& left, Integer& right) {
 	return (left.GetNumber()) < right.GetNumber();
+}
+
+bool operator>(Integer& left, Integer& right) {
+	return (left.GetNumber()) > right.GetNumber();
 }
 
 bool operator<=(Integer& left, Integer& right) {

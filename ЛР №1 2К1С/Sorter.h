@@ -1,8 +1,8 @@
 #pragma once
-template <class T>
+template <class SeqType>
 class Sorter {
 private:
 public:
-	virtual void Sort(void* Sequence) = 0;
-	virtual void Sort(void* Sequence, int startIndex, int EndIndex) = 0;
+	virtual SeqType* Sort(SeqType* Sequence) = 0;
+	virtual SeqType* Sort(SeqType* Sequence, int startIndex, int EndIndex) = 0;
 };

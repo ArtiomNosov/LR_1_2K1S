@@ -169,8 +169,12 @@
     <ClInclude Include="Integer.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListSequence.h" />
+    <ClInclude Include="SwaperArraySequence.h" />
     <ClInclude Include="Sequence.h" />
     <ClInclude Include="Sorter.h" />
+    <ClInclude Include="SorterBubbleSort.h" />
+    <ClInclude Include="SorterBubbleSortArraySequence.h" />
+    <ClInclude Include="SorterBubbleSortLinkedListSequence.h" />
     <ClInclude Include="SorterQuickSort.h" />
     <ClInclude Include="SorterQuickSortLinkedListSequence.h" />
     <ClInclude Include="Swaper.h" />

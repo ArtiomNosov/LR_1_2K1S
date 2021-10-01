@@ -51,4 +51,7 @@ public:
 		return result;
 	}
 	// Перегруженные операторы
+	virtual T* operator[](int index) {
+		return Get(index);
+	}
 };
