@@ -1,3 +1,11 @@
+/*
+*	SorterQuickSortLinkedListSequence.h
+*	Version 0.1
+*	Author: Nosov Artiom
+*	Company: Continue
+*	Email: artiom-nj@mail.ru
+*/
+
 #pragma once
 #include "SorterQuickSort.h"
 #include "SwaperLinkedListSequence.h"

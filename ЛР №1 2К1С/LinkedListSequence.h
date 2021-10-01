@@ -1,3 +1,11 @@
+/*
+*	LinkedListSequence.h
+*	Version 0.1
+*	Author: Nosov Artiom
+*	Company:
+*	Email: artiom-nj@mail.ru
+*/
+
 #pragma once
 #include "Sequence.h"
 #include "LinkedList.h"

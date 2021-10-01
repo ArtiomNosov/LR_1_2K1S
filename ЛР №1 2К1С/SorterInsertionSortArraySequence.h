@@ -1,5 +1,5 @@
 /*
-*	SorterBubbleSortLinkedListSequence.h
+*	SorterInsertionSortArraySequence.h
 *	Version 0.1
 *	Author: Nosov Artiom
 *	Company:
@@ -7,25 +7,25 @@
 */
 
 #pragma once
-#include "SorterBubbleSort.h"
-#include "SwaperLinkedListSequence.h"
-template <class T, class SeqType = LinkedListSequence<T>>
-class SorterBubbleSortLinkedListSequence : public SorterBubbleSort<SeqType, T> {
+#include "SorterInsertionSort.h"
+#include "SwaperArraySequence.h"
+template <class T, class SeqType = ArraySequence<T>>
+class SorterInsertionSortArraySequence : public SorterInsertionSort<SeqType, T> {
 private:
-    SwaperLinkedListSequence<T> Swaper;
+    SwaperArraySequence<T> Swaper;
     void Swap(SeqType* Sequence, int i, int j) override {
-        Swaper.Swap((SeqType*)Sequence, i, j);
+        Swaper.Swap(Sequence, i, j);
     }
-    using SorterBubbleSort<SeqType, T>::BubbleSort;
+    using SorterInsertionSort<SeqType, T>::InsertionSort;
 public:
     SeqType* Sort(SeqType* Sequence, int startIndex, int EndIndex) override {
         auto newSeq = Sequence->GetSubsequence(startIndex, EndIndex);
-        BubbleSort(newSeq);
+        InsertionSort(newSeq);
         return newSeq;
     }
     SeqType* Sort(SeqType* Sequence) override {
         auto newSeq = new SeqType(Sequence);
-        BubbleSort(newSeq);
+        InsertionSort(newSeq);
         return newSeq;
     }
 };

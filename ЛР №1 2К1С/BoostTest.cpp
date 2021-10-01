@@ -17,9 +17,14 @@
 #include "SorterBubbleSortArraySequence.h"
 #include "SwaperLinkedListSequence.h"
 #include "SwaperArraySequence.h"
-
-ArraySequence<Integer>* genArrayFromArrayInteger();
-ArraySequence<Integer>* genArrayFromSortedArrayInteger();
+#include "SorterShakerSortArraySequence.h"
+#include "SorterShakerSortLinkedListSequence.h"
+#include "SorterInsertionSortArraySequence.h"
+#include "SorterInsertionSortLinkedListSequence.h"
+#include "SorterSelectionSortArraySequence.h"
+#include "SorterSelectionSortLinkedListSequence.h"
+#include "SorterInsertion_binaryArraySequence.h"
+#include "SorterInsertion_binaryLinkedListSequence.h"
 
 BOOST_AUTO_TEST_SUITE(TEST_LinkedListSequence)
 
@@ -343,7 +348,7 @@ BOOST_AUTO_TEST_CASE(test_Resize) {
 BOOST_AUTO_TEST_CASE(test_Equals) {
 	auto ASeq_1 = genArraySequenceFromArrayInteger();
 	auto ASeq_2 = ASeq_1->GetSubsequence(0, ASeq_1->GetLength() - 1);
-	BOOST_TEST((*ASeq_1) == (*ASeq_2));
+	BOOST_TEST(((*ASeq_2) == (*ASeq_1)));
 }
 BOOST_AUTO_TEST_SUITE_END()
 
@@ -389,7 +394,7 @@ BOOST_AUTO_TEST_SUITE(TEST_SorterQuickSortArraySequence)
 		auto sorter = new SorterBubbleSortArraySequence<Integer>();
 		auto L2 = sorter->Sort(L1, 0, L1->GetLength() - 1);
 		L1 = genArraySequenceFromSortedArrayInteger();
-		BOOST_TEST(*L1 = *L2);
+		BOOST_TEST((*L1 == *L2));
 	}
 BOOST_AUTO_TEST_SUITE_END()
 
@@ -402,4 +407,103 @@ BOOST_AUTO_TEST_SUITE(SorterBubbleSortLinkedListSequence_test_Sort)
 		L1 = genListFromSortedArrayInteger();
 		BOOST_TEST(L1->Equals(L2));
 	}
+BOOST_AUTO_TEST_SUITE_END()
+
+BOOST_AUTO_TEST_SUITE(SorterBubbleSortArraySequence_test_Sort)
+using namespace TEST_ArraySequence;
+BOOST_AUTO_TEST_CASE(TEST_SorterBubbleSortArraySequence) {
+	ArraySequence<Integer>* ASeq_1 = genArraySequenceFromArrayInteger();
+	auto sorter = new SorterBubbleSortArraySequence<Integer>();
+	auto ASeq_2 = sorter->Sort(ASeq_1, 0, ASeq_1->GetLength() - 1);
+	ASeq_1 = genArraySequenceFromSortedArrayInteger();
+	BOOST_TEST(((*ASeq_1) == (*ASeq_2)));
+}
+BOOST_AUTO_TEST_SUITE_END()
+
+BOOST_AUTO_TEST_SUITE(SorterShakerSortLinkedListSequence_test_Sort)
+using namespace TEST_LinkedListSequence;
+BOOST_AUTO_TEST_CASE(TEST_SorterShakerSortLinkedListSequence) {
+	LinkedListSequence<Integer>* L1 = genListFromArrayInteger();
+	auto sorter = new SorterShakerSortLinkedListSequence<Integer>();
+	auto L2 = sorter->Sort(L1, 0, L1->GetLength() - 1);
+	L1 = genListFromSortedArrayInteger();
+	BOOST_TEST(L1->Equals(L2));
+}
+BOOST_AUTO_TEST_SUITE_END()
+
+BOOST_AUTO_TEST_SUITE(SorterShakerSortArraySequence_test_Sort)
+using namespace TEST_ArraySequence;
+BOOST_AUTO_TEST_CASE(TEST_SorterShakerSortArraySequence) {
+	ArraySequence<Integer>* ASeq_1 = genArraySequenceFromArrayInteger();
+	auto sorter = new SorterShakerSortArraySequence<Integer>();
+	auto ASeq_2 = sorter->Sort(ASeq_1, 0, ASeq_1->GetLength() - 1);
+	ASeq_1 = genArraySequenceFromSortedArrayInteger();
+	BOOST_TEST((*ASeq_1 == *ASeq_2));
+}
+BOOST_AUTO_TEST_SUITE_END()
+
+BOOST_AUTO_TEST_SUITE(SorterInsertionSortLinkedListSequence_test_Sort)
+using namespace TEST_LinkedListSequence;
+BOOST_AUTO_TEST_CASE(TEST_SorterInsertionSortLinkedListSequence) {
+	LinkedListSequence<Integer>* L1 = genListFromArrayInteger();
+	auto sorter = new SorterInsertionSortLinkedListSequence<Integer>();
+	auto L2 = sorter->Sort(L1, 0, L1->GetLength() - 1);
+	L1 = genListFromSortedArrayInteger();
+	BOOST_TEST(L1->Equals(L2));
+}
+BOOST_AUTO_TEST_SUITE_END()
+
+BOOST_AUTO_TEST_SUITE(SorterInsertionSortArraySequence_test_Sort)
+using namespace TEST_ArraySequence;
+BOOST_AUTO_TEST_CASE(TEST_SorterInsertionSortArraySequence) {
+	ArraySequence<Integer>* ASeq_1 = genArraySequenceFromArrayInteger();
+	auto sorter = new SorterInsertionSortArraySequence<Integer>();
+	auto ASeq_2 = sorter->Sort(ASeq_1, 0, ASeq_1->GetLength() - 1);
+	ASeq_1 = genArraySequenceFromSortedArrayInteger();
+	BOOST_TEST((*ASeq_1 == *ASeq_2));
+}
+BOOST_AUTO_TEST_SUITE_END()
+
+BOOST_AUTO_TEST_SUITE(SorterSelectionSortLinkedListSequence_test_Sort)
+using namespace TEST_LinkedListSequence;
+BOOST_AUTO_TEST_CASE(TEST_SorterSelectionSortLinkedListSequence) {
+	LinkedListSequence<Integer>* L1 = genListFromArrayInteger();
+	auto sorter = new SorterSelectionSortLinkedListSequence<Integer>();
+	auto L2 = sorter->Sort(L1, 0, L1->GetLength() - 1);
+	L1 = genListFromSortedArrayInteger();
+	BOOST_TEST(L1->Equals(L2));
+}
+BOOST_AUTO_TEST_SUITE_END()
+
+BOOST_AUTO_TEST_SUITE(SorterSelectionSortArraySequence_test_Sort)
+using namespace TEST_ArraySequence;
+BOOST_AUTO_TEST_CASE(TEST_SorterSelectionSortArraySequence) {
+	ArraySequence<Integer>* ASeq_1 = genArraySequenceFromArrayInteger();
+	auto sorter = new SorterSelectionSortArraySequence<Integer>();
+	auto ASeq_2 = sorter->Sort(ASeq_1, 0, ASeq_1->GetLength() - 1);
+	ASeq_1 = genArraySequenceFromSortedArrayInteger();
+	BOOST_TEST((*ASeq_1 == *ASeq_2));
+}
+BOOST_AUTO_TEST_SUITE_END()
+
+BOOST_AUTO_TEST_SUITE(SorterSorterInsertion_binaryLinkedListSequence_test_Sort)
+using namespace TEST_LinkedListSequence;
+BOOST_AUTO_TEST_CASE(TEST_SorterSorterInsertion_binaryLinkedListSequence) {
+	LinkedListSequence<Integer>* L1 = genListFromArrayInteger();
+	auto sorter = new SorterInsertion_binaryLinkedListSequence<Integer>();
+	auto L2 = sorter->Sort(L1, 0, L1->GetLength() - 1);
+	L1 = genListFromSortedArrayInteger();
+	BOOST_TEST(L1->Equals(L2));
+}
+BOOST_AUTO_TEST_SUITE_END()
+
+BOOST_AUTO_TEST_SUITE(SorterInsertion_binaryArraySequence_test_Sort)
+using namespace TEST_ArraySequence;
+BOOST_AUTO_TEST_CASE(TEST_SorterInsertion_binaryArraySequence) {
+	ArraySequence<Integer>* ASeq_1 = genArraySequenceFromArrayInteger();
+	auto sorter = new SorterInsertion_binaryArraySequence<Integer>();
+	auto ASeq_2 = sorter->Sort(ASeq_1, 0, ASeq_1->GetLength() - 1);
+	ASeq_1 = genArraySequenceFromSortedArrayInteger();
+	BOOST_TEST((*ASeq_1 == *ASeq_2));
+}
 BOOST_AUTO_TEST_SUITE_END()

@@ -1,3 +1,11 @@
+/*
+*	SorterBubbleSort.h
+*	Version 0.1
+*	Author: Nosov Artiom
+*	Company:
+*	Email: artiom-nj@mail.ru
+*/
+
 #pragma once
 #include "Sorter.h"
 template <class SeqType, class T>

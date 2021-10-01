@@ -4,6 +4,8 @@
 #include "SorterQuickSortLinkedListSequence.h"
 #include "ArraySequence.h"
 #include "SorterBubbleSortLinkedListSequence.h"
+#include "SorterInsertion_binaryArraySequence.h"
+#include "SorterInsertion_binaryLinkedListSequence.h"
 const int globalLengthOfArray = 10;
 int arrInt[globalLengthOfArray] = { 1, 4, 5, 5, 3, 6, 4, 1, 9, 7 };
 int arrIntSorted[globalLengthOfArray] = { 1, 1, 3, 4, 4, 5, 5, 6, 7, 9 };
@@ -165,7 +167,6 @@ int main()
 	Sorter<LinkedListSequence<Integer>>* sorter = new SorterQuickSortLinkedListSequence<Integer>();
 	auto LSeq2 = sorter->Sort(LSeq1);
 	LSeq1 = genListFromSortedArrayInteger();
-	// cout << LSeq1->Equals(LSeq2) << endl;
 
 	LinkedListSequence<Integer>* L1 = genListFromArrayInteger();
 	sorter = new SorterBubbleSortLinkedListSequence<Integer>();
@@ -174,5 +175,13 @@ int main()
 
 	ASeq_1 = genArraySequenceFromArrayInteger();
 	ASeq_2 = ASeq_1->GetSubsequence(0, ASeq_1->GetLength() - 1);
-	cout << ((*ASeq_1) == (*ASeq_2)) << endl;
+
+	L1 = genListFromArrayInteger();
+	sorter = new SorterInsertion_binaryLinkedListSequence<Integer>();
+	L2 = sorter->Sort(L1, 0, L1->GetLength() - 1);
+	L1 = genListFromSortedArrayInteger();
+	for (int i = 0; i < L2->GetLength(); i++)
+	{
+		cout<<((*L2)[i]->GetNumber())<<"  ";
+	}
 }

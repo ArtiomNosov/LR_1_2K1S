@@ -1,3 +1,11 @@
+/*
+*	SorterQuickSort.h
+*	Version 0.1
+*	Author: Nosov Artiom
+*	Company: Continue
+*	Email: artiom-nj@mail.ru
+*/
+
 #pragma once
 #include "Sorter.h"
 template <class SeqType, class T>

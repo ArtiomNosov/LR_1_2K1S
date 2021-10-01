@@ -1,3 +1,11 @@
+/*
+*	
+*	Version 0.1
+*	Author: Nosov Artiom
+*	Company:
+*	Email: artiom-nj@mail.ru
+*/
+
 #pragma once
 
 #include "DynamicArray.h"
@@ -115,24 +123,24 @@ public:
 		return Get(index);
 	}
 
-	friend bool operator==(const ArraySequence<T>& left, const ArraySequence<T>& right);
+	bool operator==(ArraySequence<T>& right){
+		bool result = true, flag = false;
+		T* item_1 = nullptr;
+		T* item_2 = nullptr;
+		int Len_1 = this->GetLength();
+		int Len_2 = right.GetLength();
+		if (Len_1 != Len_2) {
+			return false;
+		}
+		for (int i = 0; i < Len_1; i++) {
+			item_1 = this->Get(i);
+			item_2 = right.Get(i);
+			flag = ((*(item_1)) == (*(item_2)));
+			result &= flag;
+		}
+		return result;
+	};
+
 };
 
-template<class T>
-bool operator==(const ArraySequence<T>& left, const ArraySequence<T>& right) {
-	bool result = true, flag = false;
-	T* item_1 = nullptr;
-	T* item_2 = nullptr;
-	int Len_1 = left.GetLength();
-	int Len_2 = right.GetLength();
-	if (Len_1 != Len_2) {
-		return false;
-	}
-	for (int i = 0; i < left.GetLength(); i++) {
-		item_1 = left.Get(i);
-		item_2 = right.Get(i);
-		flag = ((*(item_1)) == (*(item_2)));
-		result &= flag;
-	}
-	return result;
-};
+//template<class T>

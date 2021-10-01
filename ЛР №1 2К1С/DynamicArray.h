@@ -1,4 +1,12 @@
-﻿#pragma once
+﻿/*
+*	DynamicArray.h
+*	Version 0.1
+*	Author: Nosov Artiom
+*	Company:
+*	Email: artiom-nj@mail.ru
+*/
+
+#pragma once
 #include <assert.h>
 // TODO:Тесты на все функции
 // TODO: Добавление в конец.
