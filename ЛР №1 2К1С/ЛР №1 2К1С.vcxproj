@@ -164,12 +164,22 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="-SorterHeapSort.h" />
     <ClInclude Include="ArraySequence.h" />
     <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="Integer.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListSequence.h" />
-    <ClInclude Include="SorterCountingSort.h" />
+    <ClInclude Include="-SorterBinaryTree.h" />
+    <ClInclude Include="-SorterBinaryTreeArraySequence.h" />
+    <ClInclude Include="-SorterBinaryTreeLinkedListSequence.h" />
+    <ClInclude Include="-SorterBatcherSort.h" />
+    <ClInclude Include="-SorterBatcherSortArraySequence.h" />
+    <ClInclude Include="-SorterBatcherSortLinkedListSequence.h" />
+    <ClInclude Include="RandomInteger.h" />
+    <ClInclude Include="SorterQuickSortArraySequence.h" />
+    <ClInclude Include="SorterSelectionSquareLinkedListSequence.h" />
+    <ClInclude Include="-SorterCountingSort.h" />
     <ClInclude Include="SorterInsertionSortArraySequence.h" />
     <ClInclude Include="SorterInsertionSort.h" />
     <ClInclude Include="SorterInsertionSortLinkedListSequence.h" />
@@ -179,9 +189,17 @@
     <ClInclude Include="SorterSelectionSort.h" />
     <ClInclude Include="SorterSelectionSortArraySequence.h" />
     <ClInclude Include="SorterSelectionSortLinkedListSequence.h" />
+    <ClInclude Include="SorterSelectionSquare.h" />
+    <ClInclude Include="SorterSelectionSquareArraySequence.h" />
     <ClInclude Include="SorterShakerSort.h" />
     <ClInclude Include="SorterShakerSortArraySequence.h" />
     <ClInclude Include="SorterShakerSortLinkedListSequence.h" />
+    <ClInclude Include="SorterShell_sort.h" />
+    <ClInclude Include="SorterShell_sortArraySequence.h" />
+    <ClInclude Include="SorterShell_sortDif.h" />
+    <ClInclude Include="SorterShell_sortDifArraySequence.h" />
+    <ClInclude Include="SorterShell_sortDifLinkedListSequence.h" />
+    <ClInclude Include="SorterShell_sortLinkedListSequence.h" />
     <ClInclude Include="SwaperArraySequence.h" />
     <ClInclude Include="Sequence.h" />
     <ClInclude Include="Sorter.h" />
@@ -192,6 +210,7 @@
     <ClInclude Include="SorterQuickSortLinkedListSequence.h" />
     <ClInclude Include="Swaper.h" />
     <ClInclude Include="SwaperLinkedListSequence.h" />
+    <ClInclude Include="TimeMeasurementSorter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

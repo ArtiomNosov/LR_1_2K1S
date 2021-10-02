@@ -91,4 +91,21 @@ public:
 	T* operator[](int index) {
 		return Get(index);
 	}
+	bool operator==(LinkedListSequence<T>& right) {
+		bool result = true, flag = false;
+		T* item_1 = nullptr;
+		T* item_2 = nullptr;
+		int Len_1 = this->GetLength();
+		int Len_2 = right.GetLength();
+		if (Len_1 != Len_2) {
+			return false;
+		}
+		for (int i = 0; i < Len_1; i++) {
+			item_1 = this->Get(i);
+			item_2 = right.Get(i);
+			flag = ((*(item_1)) == (*(item_2)));
+			result &= flag;
+		}
+		return result;
+	};
 };

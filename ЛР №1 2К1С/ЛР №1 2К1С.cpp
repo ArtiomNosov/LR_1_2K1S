@@ -180,8 +180,9 @@ int main()
 	sorter = new SorterInsertion_binaryLinkedListSequence<Integer>();
 	L2 = sorter->Sort(L1, 0, L1->GetLength() - 1);
 	L1 = genListFromSortedArrayInteger();
+
 	for (int i = 0; i < L2->GetLength(); i++)
 	{
-		cout<<((*L2)[i]->GetNumber())<<"  ";
+		cout << ((*ASeq_2)[i]->GetNumber()) << "  ";
 	}
 }
