@@ -610,7 +610,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterBubbleSortArraySequence) {
 	ArraySequence<Integer>* ASeqBefore = nullptr, * ASeqAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ASeqBefore->GetLength() == globalLengthOfArray));
@@ -626,7 +626,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterBubbleSortLinkedListSequen
 	LinkedListSequence<Integer>* ListBefore = nullptr, * ListAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ListBefore->GetLength() == globalLengthOfArray));
@@ -643,7 +643,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterInsertion_binaryArraySeque
 	ArraySequence<Integer>* ASeqBefore = nullptr, * ASeqAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ASeqBefore->GetLength() == globalLengthOfArray));
@@ -659,7 +659,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterInsertion_binaryLinkedList
 	LinkedListSequence<Integer>* ListBefore = nullptr, * ListAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ListBefore->GetLength() == globalLengthOfArray));
@@ -676,7 +676,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterInsertionSortArraySequence
 	ArraySequence<Integer>* ASeqBefore = nullptr, * ASeqAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ASeqBefore->GetLength() == globalLengthOfArray));
@@ -692,7 +692,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterInsertionSortLinkedListSeq
 	LinkedListSequence<Integer>* ListBefore = nullptr, * ListAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ListBefore->GetLength() == globalLengthOfArray));
@@ -709,7 +709,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterQuickSortArraySequence) {
 	ArraySequence<Integer>* ASeqBefore = nullptr, * ASeqAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ASeqBefore->GetLength() == globalLengthOfArray));
@@ -725,7 +725,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterQuickSortLinkedListSequenc
 	LinkedListSequence<Integer>* ListBefore = nullptr, * ListAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ListBefore->GetLength() == globalLengthOfArray));
@@ -742,7 +742,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterSelectionSortArraySequence
 	ArraySequence<Integer>* ASeqBefore = nullptr, * ASeqAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ASeqBefore->GetLength() == globalLengthOfArray));
@@ -758,7 +758,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterSelectionSortLinkedListSeq
 	LinkedListSequence<Integer>* ListBefore = nullptr, * ListAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ListBefore->GetLength() == globalLengthOfArray));
@@ -775,7 +775,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterSelectionSquareArraySequen
 	ArraySequence<Integer>* ASeqBefore = nullptr, * ASeqAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ASeqBefore->GetLength() == globalLengthOfArray));
@@ -791,7 +791,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterSelectionSquareLinkedListS
 	LinkedListSequence<Integer>* ListBefore = nullptr, * ListAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ListBefore->GetLength() == globalLengthOfArray));
@@ -808,7 +808,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterShakerSortArraySequence) {
 	ArraySequence<Integer>* ASeqBefore = nullptr, * ASeqAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ASeqBefore->GetLength() == globalLengthOfArray));
@@ -824,7 +824,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterShakerSortLinkedListSequen
 	LinkedListSequence<Integer>* ListBefore = nullptr, * ListAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ListBefore->GetLength() == globalLengthOfArray));
@@ -841,7 +841,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterShell_sortArraySequence) {
 	ArraySequence<Integer>* ASeqBefore = nullptr, * ASeqAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ASeqBefore->GetLength() == globalLengthOfArray));
@@ -857,7 +857,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterShell_sortLinkedListSequen
 	LinkedListSequence<Integer>* ListBefore = nullptr, * ListAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ListBefore->GetLength() == globalLengthOfArray));
@@ -874,7 +874,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterShell_sortDifArraySequence
 	ArraySequence<Integer>* ASeqBefore = nullptr, * ASeqAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ASeqBefore, ASeqAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ASeqBefore->GetLength() == globalLengthOfArray));
@@ -890,7 +890,7 @@ BOOST_AUTO_TEST_CASE(TimeMeasurementSorter_TEST_SorterShell_sortDifLinkedListSeq
 	LinkedListSequence<Integer>* ListBefore = nullptr, * ListAfter = nullptr;
 	long long int timeSort = 0;
 
-	timeSort = TimeMeasurementSorter(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
+	timeSort = TimeMeasurementSorterWithRandom(ListBefore, ListAfter, sorter, globalLengthOfArray, randomInteger);
 
 	BOOST_TEST((timeSort < 60));
 	BOOST_TEST((ListBefore->GetLength() == globalLengthOfArray));

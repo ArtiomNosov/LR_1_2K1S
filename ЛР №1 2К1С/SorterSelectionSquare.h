@@ -15,12 +15,12 @@ private:
 protected:
     void SelectionSquare(SeqType* Sequence)
     {
-        const size_t size = Sequence->GetLength();
-        for (size_t idx_i = 0; idx_i < size - 1; idx_i++)
+        const int size = Sequence->GetLength();
+        for (int idx_i = 0; idx_i < size - 1; idx_i++)
         {
-            size_t min_idx = idx_i;
+            int min_idx = idx_i;
 
-            for (size_t idx_j = idx_i + 1; idx_j < size; idx_j++)
+            for (int idx_j = idx_i + 1; idx_j < size; idx_j++)
             {
                 if (*(*Sequence)[idx_j] < *(*Sequence)[min_idx])
                 {

@@ -1,0 +1,14 @@
+Type of container:	class LinkedListSequence<class Integer> * __ptr64
+Sorter using for sort:	class SorterQuickSortLinkedListSequence<class Integer,class LinkedListSequence<class Integer> > * __ptr64
+Count of elements	Time of processing
+
+0	0
+1000	0
+2000	0
+3000	1
+4000	2
+5000	2
+6000	3
+7000	5
+8000	6
+9000	9

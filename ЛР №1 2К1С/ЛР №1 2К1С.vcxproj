@@ -166,8 +166,10 @@
   <ItemGroup>
     <ClInclude Include="-SorterHeapSort.h" />
     <ClInclude Include="ArraySequence.h" />
+    <ClInclude Include="-ConsoleInterface.h" />
     <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="Integer.h" />
+    <ClInclude Include="InterfaceProcedure.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListSequence.h" />
     <ClInclude Include="-SorterBinaryTree.h" />
@@ -177,6 +179,7 @@
     <ClInclude Include="-SorterBatcherSortArraySequence.h" />
     <ClInclude Include="-SorterBatcherSortLinkedListSequence.h" />
     <ClInclude Include="RandomInteger.h" />
+    <ClInclude Include="-SorterMerge_sort.h" />
     <ClInclude Include="SorterQuickSortArraySequence.h" />
     <ClInclude Include="SorterSelectionSquareLinkedListSequence.h" />
     <ClInclude Include="-SorterCountingSort.h" />

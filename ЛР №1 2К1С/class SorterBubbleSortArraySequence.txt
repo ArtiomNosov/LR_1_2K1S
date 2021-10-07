@@ -1,0 +1,14 @@
+Type of container:	class ArraySequence<class Integer> * __ptr64
+Sorter using for sort:	class SorterBubbleSortArraySequence<class Integer,class ArraySequence<class Integer> > * __ptr64
+Count of elements	Time of processing
+
+0	0
+1000	0
+2000	0
+3000	2
+4000	2
+5000	4
+6000	6
+7000	7
+8000	10
+9000	13

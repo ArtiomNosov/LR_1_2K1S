@@ -1,0 +1,14 @@
+Type of container:	class ArraySequence<class Integer> * __ptr64
+Sorter using for sort:	class SorterSelectionSquareArraySequence<class Integer,class ArraySequence<class Integer> > * __ptr64
+Count of elements	Time of processing
+
+0	0
+1000	0
+2000	0
+3000	1
+4000	2
+5000	3
+6000	4
+7000	6
+8000	7
+9000	9

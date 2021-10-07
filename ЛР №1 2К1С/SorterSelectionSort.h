@@ -14,10 +14,11 @@ private:
     virtual void Swap(SeqType* Sequence, int i, int j) = 0;
 protected:
     // Функция сортировки прямым выбором
+    // Сортировка с помощью простого выбора
     void SelectionSort(SeqType* Sequence)
     {
         int size = Sequence->GetLength();
-        int min, temp; // для поиска минимального элемента и для обмена
+        int min = 0; // для поиска минимального элемента и для обмена
         for (int i = 0; i < size - 1; i++)
         {
             min = i; // запоминаем индекс текущего элемента

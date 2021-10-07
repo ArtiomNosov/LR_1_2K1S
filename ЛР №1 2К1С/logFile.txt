@@ -1,0 +1,105 @@
+Thu Jan  1 03:00:00 1970
+UNIX time and date:			Tue Oct  5 21:30:34 2021
+
+Контейнер:	ArraySequence
+ Количество элементов в контейнере:	0
+Выполненная операция: SorterBubbleSort
+Затраченное время: 0
+Thu Jan  1 03:00:00 1970
+UNIX time and date:			Tue Oct  5 21:30:35 2021
+
+Контейнер:	ArraySequence
+ Количество элементов в контейнере:	0
+Выполненная операция: SorterBubbleSort
+Затраченное время: 0
+Thu Jan  1 03:00:00 1970
+UNIX time and date:			Tue Oct  5 21:30:35 2021
+
+Контейнер:	ArraySequence
+ Количество элементов в контейнере:	0
+Выполненная операция: SorterBubbleSort
+Затраченное время: 0
+UNIX time and date:			Tue Oct  5 21:32:04 2021
+
+Контейнер:	ArraySequence
+ Количество элементов в контейнере:	0
+Выполненная операция: SorterBubbleSort
+Затраченное время: 0
+UNIX time and date:			Tue Oct  5 21:32:05 2021
+
+Контейнер:	ArraySequence
+ Количество элементов в контейнере:	0
+Выполненная операция: SorterBubbleSort
+Затраченное время: 0
+UNIX time and date:			Tue Oct  5 21:32:06 2021
+
+Контейнер:	ArraySequence
+ Количество элементов в контейнере:	0
+Выполненная операция: SorterBubbleSort
+Затраченное время: 0
+
+UNIX time and date:			Tue Oct  5 21:33:54 2021
+Контейнер:	ArraySequence
+ Количество элементов в контейнере:	200000
+Выполненная операция: Сгенерировать случайные данные
+Затраченное время: 5
+
+UNIX time and date:			Tue Oct  5 22:01:23 2021
+Контейнер:	LinkedListSequence
+ Количество элементов в контейнере:	200
+Выполненная операция: Сгенерировать случайные данные
+Затраченное время: 3
+
+UNIX time and date:			Tue Oct  5 22:01:33 2021
+Контейнер:	LinkedListSequence
+ Количество элементов в контейнере:	200
+Выполненная операция: SorterBubbleSort
+Затраченное время: 0
+
+UNIX time and date:			Tue Oct  5 22:01:44 2021
+Контейнер:	LinkedListSequence
+ Количество элементов в контейнере:	1000
+Выполненная операция: Сгенерировать случайные данные
+Затраченное время: 3
+
+UNIX time and date:			Tue Oct  5 22:01:53 2021
+Контейнер:	LinkedListSequence
+ Количество элементов в контейнере:	1000
+Выполненная операция: SorterBubbleSort
+Затраченное время: 2
+
+UNIX time and date:			Tue Oct  5 22:02:08 2021
+Контейнер:	LinkedListSequence
+ Количество элементов в контейнере:	10000
+Выполненная операция: Сгенерировать случайные данные
+Затраченное время: 7
+
+UNIX time and date:			Tue Oct  5 22:09:17 2021
+Контейнер:	LinkedListSequence
+ Количество элементов в контейнере:	10000
+Выполненная операция: Сгенерировать случайные данные
+Затраченное время: 4
+
+UNIX time and date:			Tue Oct  5 22:09:24 2021
+Контейнер:	LinkedListSequence
+ Количество элементов в контейнере:	10000
+Выполненная операция: SorterQuickSort
+Затраченное время: 0
+
+UNIX time and date:			Tue Oct  5 22:09:54 2021
+Контейнер:	LinkedListSequence
+ Количество элементов в контейнере:	10000
+Выполненная операция: SorterShell_sort
+Затраченное время: 0
+
+UNIX time and date:			Tue Oct  5 22:10:02 2021
+Контейнер:	LinkedListSequence
+ Количество элементов в контейнере:	10000
+Выполненная операция: SorterSelectionSquare
+Затраченное время: 0
+
+UNIX time and date:			Tue Oct  5 22:10:20 2021
+Контейнер:	LinkedListSequence
+ Количество элементов в контейнере:	10000
+Выполненная операция: SorterInsertion_binary
+Затраченное время: 12

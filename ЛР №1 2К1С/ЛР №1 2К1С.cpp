@@ -6,10 +6,13 @@
 #include "SorterBubbleSortLinkedListSequence.h"
 #include "SorterInsertion_binaryArraySequence.h"
 #include "SorterInsertion_binaryLinkedListSequence.h"
+#include "InterfaceProcedure.h"
+#include "TimeMeasurementSorter.h"
+#include "RandomInteger.h"
 const int globalLengthOfArray = 10;
 int arrInt[globalLengthOfArray] = { 1, 4, 5, 5, 3, 6, 4, 1, 9, 7 };
 int arrIntSorted[globalLengthOfArray] = { 1, 1, 3, 4, 4, 5, 5, 6, 7, 9 };
-
+using namespace std;
 class MyInt {
 private:
 	int data;
@@ -98,91 +101,14 @@ LinkedListSequence<Integer>* genListFromSortedArrayInteger() {
 	auto arr = genArrPtrInteger(arrIntSorted, globalLengthOfArray);
 	return new LinkedListSequence<Integer>(arr, globalLengthOfArray);
 }
-
-int main()
-{
-	auto ASeq = genArraySequenceFromArrayInteger();
-
-
-	auto ASeq_1 = genArraySequenceFromArrayInteger();
-	auto ASeq_2 = new ArraySequence<Integer>(*ASeq_1);
-
-
-	ASeq = genArraySequenceFromArrayInteger();
-
-
-	ASeq = genArraySequenceFromArrayInteger();
-
-
-	ASeq = genArraySequenceFromArrayInteger();
-
-
-
-	ASeq = genArraySequenceFromArrayInteger();
-	auto SubASeq = ASeq->GetSubsequence(1, ASeq->GetLength() / 2);
-
-
-
-	ASeq = genArraySequenceFromArrayInteger();
-
-	ASeq->Resize(0);
-
-
-	ASeq = genArraySequenceFromArrayInteger();
-	ASeq->Set(0, ASeq->GetLast());
-
-
-
-	ASeq = genArraySequenceFromArrayInteger();
-	ASeq->Append(ASeq->GetFirst());
-
-
-	 ASeq = genArraySequenceFromArrayInteger();
-	ASeq->Prepend(ASeq->GetFirst());
-
-
-	ASeq = genArraySequenceFromArrayInteger();
-	auto elemInsert = new Integer((ASeq->GetLast()->GetNumber() + ASeq->GetFirst()->GetNumber()));
-	auto elem0 = ASeq->GetFirst();
-	auto elem1 = ASeq->Get(1);
-
-	ASeq->InsertAt(elemInsert, 1);
-
-
-	ASeq_1 = genArraySequenceFromArrayInteger();
-	ASeq_2 = ASeq_1->GetSubsequence(1, ASeq_1->GetLength() / 2);
-
-	auto ASeq_concat = ASeq_1->Concat(ASeq_2);
-
-
-	ASeq_concat = ASeq_2->Concat(ASeq_1);
-
-
-	ASeq_1 = genArraySequenceFromArrayInteger();
-	for (int i = 0; i < ASeq_1->GetLength() - 1; i++) {
-		ASeq_1->Resize(globalLengthOfArray - 1 - i);
-	}
-
-	LinkedListSequence<Integer>* LSeq1 = genListFromArrayInteger();
-	Sorter<LinkedListSequence<Integer>>* sorter = new SorterQuickSortLinkedListSequence<Integer>();
-	auto LSeq2 = sorter->Sort(LSeq1);
-	LSeq1 = genListFromSortedArrayInteger();
-
-	LinkedListSequence<Integer>* L1 = genListFromArrayInteger();
-	sorter = new SorterBubbleSortLinkedListSequence<Integer>();
-	auto L2 = sorter->Sort(L1, 0, L1->GetLength() - 1);
-	L1 = genListFromSortedArrayInteger();
-
-	ASeq_1 = genArraySequenceFromArrayInteger();
-	ASeq_2 = ASeq_1->GetSubsequence(0, ASeq_1->GetLength() - 1);
-
-	L1 = genListFromArrayInteger();
-	sorter = new SorterInsertion_binaryLinkedListSequence<Integer>();
-	L2 = sorter->Sort(L1, 0, L1->GetLength() - 1);
-	L1 = genListFromSortedArrayInteger();
-
-	for (int i = 0; i < L2->GetLength(); i++)
-	{
-		cout << ((*ASeq_2)[i]->GetNumber()) << "  ";
-	}
+int main() {
+	setlocale(LC_ALL, "Rus");
+	//MyTaskLR12K1C MyTask;
+	//MyTask.firstMenuLR12K1C();
+	const int countOfElements = 10000;
+	const int countOfSteps = 10;
+	ofstream test("test.txt");
+	test << "Hello World!";
+	test.close(); // закрываем файл
+	TimeMeasurementAllSorters(countOfElements, countOfSteps, randomInteger);
 }

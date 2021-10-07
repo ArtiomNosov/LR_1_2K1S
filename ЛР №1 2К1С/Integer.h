@@ -38,6 +38,9 @@ public:
 	friend bool operator>(Integer& left, Integer& right);
 
 	friend bool operator<=(Integer& left, Integer& right);
+
+	friend std::ostream& operator<< (std::ostream& out, Integer& point);
+	friend std::istream& operator>> (std::istream& in, Integer& point);
 };
 
 const Integer operator+(const Integer& left, const Integer& right) {
@@ -68,4 +71,14 @@ bool operator>(Integer& left, Integer& right) {
 
 bool operator<=(Integer& left, Integer& right) {
 	return left.GetNumber() <= right.GetNumber();
+}
+
+std::ostream& operator<< (std::ostream& out, Integer& integer) {
+	out << integer.WholeNamber;
+	return out;
+}
+
+std::istream& operator>> (std::istream& in, Integer& integer) {
+	in >> integer.WholeNamber;
+	return in;
 }
